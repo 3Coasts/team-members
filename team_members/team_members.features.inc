@@ -58,7 +58,7 @@ function team_members_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '200',
+          'width' => '220',
           'height' => '180',
         ),
         'weight' => '1',
