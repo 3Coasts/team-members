@@ -60,7 +60,7 @@ function team_members_views_default_views() {
   $handler->display->display_options['fields']['field_image']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'team_member_portrait',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_image']['field_api_classes'] = 0;

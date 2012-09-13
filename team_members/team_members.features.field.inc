@@ -392,7 +392,7 @@ function team_members_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'inline',
+            'image_style' => 'team_member_portrait',
           ),
           'type' => 'image',
           'weight' => '8',
@@ -402,7 +402,7 @@ function team_members_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => 'content',
-            'image_style' => 'thumbnail',
+            'image_style' => 'team_member_portrait',
           ),
           'type' => 'image',
           'weight' => '0',
