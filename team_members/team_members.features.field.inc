@@ -43,7 +43,7 @@ function team_members_field_default_fields() {
       'default_value' => array(
         0 => array(
           'summary' => '',
-          'value' => 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+          'value' => '',
           'format' => 'filtered_html',
         ),
       ),
