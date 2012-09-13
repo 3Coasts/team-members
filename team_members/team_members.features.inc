@@ -37,3 +37,35 @@ function team_members_node_info() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function team_members_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: association_logo
+  $styles['team_member_portrait'] = array(
+    'name' => 'team_member_portrait',
+    'effects' => array(
+      53 => array(
+        'label' => 'Scale and crop',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_scale_and_crop_dimensions',
+        'form callback' => 'image_scale_and_crop_form',
+        'summary theme' => 'image_scale_and_crop_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '180',
+          'height' => '220',
+          'upscale' => 1,
+        ),
+        'weight' => '2',
+      ),
+    ),
+  );
+
+
+  return $styles;
+}
