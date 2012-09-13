@@ -48,20 +48,20 @@ function team_members_image_default_styles() {
   $styles['team_member_portrait'] = array(
     'name' => 'team_member_portrait',
     'effects' => array(
-      53 => array(
+      6 => array(
         'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_scale_and_crop_dimensions',
-        'form callback' => 'image_scale_and_crop_form',
-        'summary theme' => 'image_scale_and_crop_summary',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '180',
-          'height' => '220',
-          'upscale' => 1,
+          'width' => '200',
+          'height' => '180',
         ),
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
