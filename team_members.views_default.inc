@@ -30,8 +30,7 @@ function team_members_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
@@ -41,8 +40,8 @@ function team_members_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-  'image_style' => 'team_member_portrait',
-  'image_link' => 'content',
+    'image_style' => 'team_member_portrait',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -69,13 +68,12 @@ function team_members_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-  'team_member' => 'team_member',
+    'team_member' => 'team_member',
   );
 
   /* Display: Team Members */
   $handler = $view->new_display('block', 'Team Members', 'block_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-
   $export['team_members'] = $view;
 
   return $export;
